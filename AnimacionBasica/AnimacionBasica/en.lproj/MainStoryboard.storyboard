@@ -12,13 +12,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-lr-t9g">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="Td2-U0-NG9"/>
-                                    <constraint firstAttribute="width" constant="315" id="tNa-Cy-Rpf"/>
-                                </constraints>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-Ct-zxq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="frame-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-lr-t9g"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.25" maxValue="1.75" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-Ct-zxq">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="1Km-Vk-NrU"/>
                                 </constraints>
@@ -65,16 +60,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="vno-AS-gAf" secondAttribute="bottom" constant="35" id="BPJ-8m-5zv"/>
-                            <constraint firstItem="c7a-lr-t9g" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="FUE-Br-VuG"/>
-                            <constraint firstAttribute="trailing" secondItem="1Jl-AJ-cz7" secondAttribute="trailing" constant="10" id="OP6-FJ-955"/>
-                            <constraint firstItem="vno-AS-gAf" firstAttribute="top" secondItem="GwJ-nI-xeu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PBS-Bt-7V9"/>
-                            <constraint firstAttribute="bottom" secondItem="1Jl-AJ-cz7" secondAttribute="bottom" constant="87" id="YTn-zQ-xkR"/>
+                            <constraint firstItem="zSO-Sf-8W0" firstAttribute="top" secondItem="c7a-lr-t9g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4Dx-Hu-V0b"/>
+                            <constraint firstItem="c7a-lr-t9g" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5Kg-6U-L9C"/>
+                            <constraint firstAttribute="bottom" secondItem="1Jl-AJ-cz7" secondAttribute="bottom" constant="68" id="9Iw-MW-cY1"/>
+                            <constraint firstItem="vno-AS-gAf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="117" id="Fi5-Mi-kP9"/>
+                            <constraint firstAttribute="bottom" secondItem="GwJ-nI-xeu" secondAttribute="bottom" constant="73" id="YSJ-Xf-LnO"/>
+                            <constraint firstItem="c7a-lr-t9g" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="aOv-at-0jV"/>
+                            <constraint firstAttribute="trailing" secondItem="1Jl-AJ-cz7" secondAttribute="trailing" constant="13" id="dOS-qz-LTD"/>
                             <constraint firstItem="tEi-Ct-zxq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="103" id="fGF-ef-xru"/>
-                            <constraint firstItem="vno-AS-gAf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="114" id="gXF-UU-5bo"/>
-                            <constraint firstAttribute="bottom" secondItem="tEi-Ct-zxq" secondAttribute="bottom" constant="129" id="jdv-mZ-SUn"/>
-                            <constraint firstItem="zSO-Sf-8W0" firstAttribute="top" secondItem="tEi-Ct-zxq" secondAttribute="top" type="default" id="sPy-eV-ncu"/>
-                            <constraint firstItem="c7a-lr-t9g" firstAttribute="top" secondItem="3" secondAttribute="top" constant="93" id="td3-ew-05q"/>
+                            <constraint firstItem="tEi-Ct-zxq" firstAttribute="top" secondItem="c7a-lr-t9g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ofS-sr-Kum"/>
+                            <constraint firstAttribute="bottom" secondItem="vno-AS-gAf" secondAttribute="bottom" constant="13" id="rTU-B8-qcp"/>
                             <constraint firstItem="GwJ-nI-xeu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="15" id="vqI-XT-0ym"/>
                             <constraint firstItem="zSO-Sf-8W0" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="xyl-Nn-CJz"/>
                         </constraints>
@@ -92,22 +87,9 @@
             <point key="canvasLocation" x="160" y="35"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="palancaAnimacion:"/>
-                <relationship kind="action" name="startBoton:"/>
-                <relationship kind="outlet" name="imagenView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="palancaBoton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="velocidadLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="velocidadSlider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-    </classes>
+    <resources>
+        <image name="frame-1.png" width="320" height="320"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

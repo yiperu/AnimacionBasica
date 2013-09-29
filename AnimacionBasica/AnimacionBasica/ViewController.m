@@ -14,10 +14,42 @@
 
 @implementation ViewController
 
+@synthesize imagenView,velocidadSlider,velocidadLabel,palancaBoton;
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *lasImagenes;
+    lasImagenes = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"frame-1.png"],
+                   [UIImage imageNamed:@"frame-1.png"],
+                   [UIImage imageNamed:@"frame-2.png"],
+                   [UIImage imageNamed:@"frame-3.png"],
+                   [UIImage imageNamed:@"frame-4.png"],
+                   [UIImage imageNamed:@"frame-5.png"],
+                   [UIImage imageNamed:@"frame-6.png"],
+                   [UIImage imageNamed:@"frame-7.png"],
+                   [UIImage imageNamed:@"frame-8.png"],
+                   [UIImage imageNamed:@"frame-9.png"],
+                   [UIImage imageNamed:@"frame-10.png"],
+                   [UIImage imageNamed:@"frame-11.png"],
+                   [UIImage imageNamed:@"frame-12.png"],
+                   [UIImage imageNamed:@"frame-13.png"],
+                   [UIImage imageNamed:@"frame-14.png"],
+                   [UIImage imageNamed:@"frame-15.png"],
+                   [UIImage imageNamed:@"frame-16.png"],
+                   [UIImage imageNamed:@"frame-17.png"],
+                   [UIImage imageNamed:@"frame-18.png"],
+                   [UIImage imageNamed:@"frame-19.png"],
+                   [UIImage imageNamed:@"frame-20.png"],
+                   nil];
+    
+    imagenView.animationImages = lasImagenes;
+    imagenView.animationDuration = 1 ;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,6 +68,16 @@
 - (IBAction)palancaAnimacion:(id)sender {
 }
 
-- (IBAction)startBoton:(id)sender {
+- (IBAction)startBoton:(UIButton *)sender {
+
+    if (imagenView.isAnimating) {
+        [sender setTitle:@"Iniciar" forState:UIControlStateNormal];
+        [imagenView stopAnimating];
+    } else {
+        [imagenView startAnimating];
+        [sender setTitle:@"Stop" forState:UIControlStateNormal];
+    }
+    
+    
 }
 @end
