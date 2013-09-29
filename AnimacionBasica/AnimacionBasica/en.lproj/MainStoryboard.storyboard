@@ -11,18 +11,101 @@
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-lr-t9g">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Td2-U0-NG9"/>
+                                    <constraint firstAttribute="width" constant="315" id="tNa-Cy-Rpf"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-Ct-zxq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="1Km-Vk-NrU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="palancaAnimacion:" destination="2" eventType="valueChanged" id="G1K-ff-h4s"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velocidad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSO-Sf-8W0">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velocidad/seg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwJ-nI-xeu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.0 hps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jl-AJ-cz7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Zay-pv-uLX"/>
+                                    <constraint firstAttribute="width" constant="66" id="xia-Dt-POv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vno-AS-gAf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="V2u-Ah-1Qv"/>
+                                    <constraint firstAttribute="height" constant="49" id="q7R-qX-IsI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Iniciar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBoton:" destination="2" eventType="touchUpInside" id="xSq-7K-vyd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vno-AS-gAf" secondAttribute="bottom" constant="35" id="BPJ-8m-5zv"/>
+                            <constraint firstItem="c7a-lr-t9g" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="FUE-Br-VuG"/>
+                            <constraint firstAttribute="trailing" secondItem="1Jl-AJ-cz7" secondAttribute="trailing" constant="10" id="OP6-FJ-955"/>
+                            <constraint firstItem="vno-AS-gAf" firstAttribute="top" secondItem="GwJ-nI-xeu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PBS-Bt-7V9"/>
+                            <constraint firstAttribute="bottom" secondItem="1Jl-AJ-cz7" secondAttribute="bottom" constant="87" id="YTn-zQ-xkR"/>
+                            <constraint firstItem="tEi-Ct-zxq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="103" id="fGF-ef-xru"/>
+                            <constraint firstItem="vno-AS-gAf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="114" id="gXF-UU-5bo"/>
+                            <constraint firstAttribute="bottom" secondItem="tEi-Ct-zxq" secondAttribute="bottom" constant="129" id="jdv-mZ-SUn"/>
+                            <constraint firstItem="zSO-Sf-8W0" firstAttribute="top" secondItem="tEi-Ct-zxq" secondAttribute="top" type="default" id="sPy-eV-ncu"/>
+                            <constraint firstItem="c7a-lr-t9g" firstAttribute="top" secondItem="3" secondAttribute="top" constant="93" id="td3-ew-05q"/>
+                            <constraint firstItem="GwJ-nI-xeu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="15" id="vqI-XT-0ym"/>
+                            <constraint firstItem="zSO-Sf-8W0" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="xyl-Nn-CJz"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imagenView" destination="c7a-lr-t9g" id="NKE-sk-Kce"/>
+                        <outlet property="palancaBoton" destination="vno-AS-gAf" id="eQ6-KD-a1w"/>
+                        <outlet property="velocidadLabel" destination="1Jl-AJ-cz7" id="2hi-uR-Ou0"/>
+                        <outlet property="velocidadSlider" destination="tEi-Ct-zxq" id="eiV-Cb-Zxt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="52"/>
+            <point key="canvasLocation" x="160" y="35"/>
         </scene>
     </scenes>
     <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="palancaAnimacion:"/>
+                <relationship kind="action" name="startBoton:"/>
+                <relationship kind="outlet" name="imagenView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="palancaBoton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="velocidadLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="velocidadSlider" candidateClass="UISlider"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

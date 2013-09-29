@@ -26,4 +26,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setImagenView:nil];
+    [self setVelocidadSlider:nil];
+    [self setVelocidadLabel:nil];
+    [self setPalancaBoton:nil];
+    [super viewDidUnload];
+}
+- (IBAction)palancaAnimacion:(id)sender {
+}
+
+- (IBAction)startBoton:(id)sender {
+}
 @end
