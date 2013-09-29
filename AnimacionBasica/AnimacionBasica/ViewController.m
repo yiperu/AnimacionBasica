@@ -66,6 +66,12 @@
     [super viewDidUnload];
 }
 - (IBAction)palancaAnimacion:(id)sender {
+    NSString *cadenaDeVelocidad;
+    imagenView.animationDuration = 2-velocidadSlider.value;
+    [imagenView startAnimating];
+    [palancaBoton setTitle:@"Stop" forState:UIControlStateNormal];
+    cadenaDeVelocidad = [[NSString alloc] initWithFormat:@"%1.2f hps",1/(2-velocidadSlider.value)];
+    velocidadLabel.text = cadenaDeVelocidad;
 }
 
 - (IBAction)startBoton:(UIButton *)sender {
